@@ -43,5 +43,8 @@ public class UDPClient {
 		//注意这里的信息长度应该是datagramPacket2.getLength()。
 		String data2 = new String(data, 0, datagramPacket2.getLength());
 		System.out.println(data2);
+		
+		//关闭资源
+		datagramSocket.close();
 	}
 }
