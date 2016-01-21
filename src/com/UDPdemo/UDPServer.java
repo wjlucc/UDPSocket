@@ -20,7 +20,7 @@ public class UDPServer {
 		datagramSocket.receive(datagramPacket);	//此方法在接收到数据之前会一直处于阻塞状态。
 		
 		//4.读取接收到的消息
-		String data = new String(info,0,info.length);
+		String data = new String(info,0,datagramPacket.getLength());
 		System.out.println("收到消息："+data);
 //		System.out.println("收到消息："+Arrays.toString(info));
 	}

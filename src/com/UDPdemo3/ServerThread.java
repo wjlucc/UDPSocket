@@ -35,7 +35,7 @@ public class ServerThread extends Thread {
 			this.datagramSocket.receive(this.datagramPacket);
 
 			// 处理收到的消息。
-			String data = new String(this.info, 0, this.info.length);
+			String data = new String(this.info, 0, this.datagramPacket.getLength());
 			System.out.println("客户端发送的消息是：" + data);
 
 			// 进行响应。

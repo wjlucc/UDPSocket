@@ -38,8 +38,10 @@ public class UDPClient {
 		// 3.接收消息
 		datagramSocket.receive(datagramPacket2);
 
-		// 4.处理接收到的消息
-		String data2 = new String(data, 0, data.length);
+		// 4.处理接收到的消息。。
+		//String data2 = new String(data, 0, data.length);
+		//注意这里的信息长度应该是datagramPacket2.getLength()。
+		String data2 = new String(data, 0, datagramPacket2.getLength());
 		System.out.println(data2);
 	}
 }

@@ -38,7 +38,7 @@ public class UDPClient {
 		datagramSocket.receive(datagramPacket2);
 		
 		//4.处理接收到的消息
-		String data2 = new String(data,0,data.length);
+		String data2 = new String(data,0,datagramPacket2.getLength());
 		System.out.println(data2);
 		
 		
