@@ -13,7 +13,7 @@ public class UDPServer {
 		System.out.println("-----服务器端已经启动-----");
 		while (true) {
 			ServerThread serverThread = new ServerThread(datagramSocket);
-			serverThread.run();
+			serverThread.run();//这里是用的run，有点小问题。
 		}
 	}
 }
